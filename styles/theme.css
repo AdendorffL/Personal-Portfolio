@@ -1,4 +1,50 @@
-/* Light Mode Variables */
+/* Base Colors*/
+:root {
+    /* Light Mode Base */
+    --color-offwhite: #f8f9fa;
+    --color-light-gray: #e9ecef;
+    --color-mid-gray: #ced4da;
+    --color-dark-gray: #495057;
+    --color-near-black: #212529;
 
+    /* Dark Mode Base (inverse spectrum) */
+    --color-dark-bg: #0f172a;
+    --color-dark-surface: #1e293b;
+    --color-dark-border: #334155;
+    --color-light-text: #e2e8f0;
+    --color-muted-text: #94a3b8;
+}
 
-/* Dark mode Variables */
+/* Color Mapping */
+:root {
+    /* Backgrounds */
+    --background: var(--color-offwhite);
+    --surface: var(--color-light-gray);
+
+    /* Text */
+    --text-primary: var(--color-near-black);
+    --text-secondary: var(--color-dark-gray);
+    --text-muted: var(--color-mid-gray);
+
+    /* Borders */
+    --border: var(--color-mid-gray);
+
+    /* Accent */
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+}
+
+/* Dark Mode Override */
+[data-theme="dark"] {
+    --background: var(--color-dark-bg);
+    --surface: var(--color-dark-surface);
+
+    --text-primary: var(--color-light-text);
+    --text-secondary: var(--color-muted-text);
+    --text-muted: #64748b;
+
+    --border: var(--color-dark-border);
+
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+}
