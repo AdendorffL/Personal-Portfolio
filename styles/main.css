@@ -1,5 +1,6 @@
 @import url("./theme.css");
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("./nav.css");
 
 html {
     scroll-behavior: smooth;
@@ -24,51 +25,7 @@ main {
     padding: 0 6%;
 }
 
-nav * {
-    display: flex;
-    color: black;
-}
 
-nav {
-    display: flex;
-    position:fixed;
-    width: 80%;
-    border: 1px solid black;
-    border-radius: 14px;
-    justify-content: space-between;
-    margin-top: 10px;
-    background-color: #b6b6b691;
-    backdrop-filter: blur(10px);
-    padding: 0 20px;
-    
-}
-
-#logo {
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    margin: 10px;
-    padding: 4px 10px;
-    border-radius: 18px;
-    transition: background-color 0.3s ease-in-out 0s;
-}
-
-nav ul li:hover {
-    background-color: #b6b6b6;
-}
-
-.nav-link.active {
-    color: white;
-}
-
-.nav-link.active::after {
-    color: white;
-}
 
 #hero {
     height: 1080px;
@@ -76,7 +33,6 @@ nav ul li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
     width: 100%;
 }
 

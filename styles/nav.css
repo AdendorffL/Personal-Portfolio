@@ -1,0 +1,49 @@
+@import url('../js/scroll.js');
+
+nav * {
+    display: flex;
+    color: black;
+}
+
+nav {
+    display: flex;
+    position:fixed;
+    width: 80%;
+    border: 1px solid rgba(131, 131, 131, 0.6);
+    border-radius: 14px;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: #b6b6b691;
+    backdrop-filter: blur(10px);
+    padding: 0 20px;
+    
+}
+
+#logo {
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 10px;
+    padding: 6px 12px;
+    border-radius: 18px;
+    transition: background-color 0.3s ease-in-out 0s;
+    font-weight: 500;
+}
+
+nav ul li:hover {
+    background-color: #b6b6b6;
+}
+
+nav ul li.active a {
+    color: white;
+}
+
+nav ul li.active {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
