@@ -154,7 +154,7 @@ nav ul li.active {
 
 #projects-btn:hover {
     background-color: #333;
-    transform: scale(1.01);
+    transform: scale(1.01) translateY(-2px);
 }
 
 .floating-shape {
