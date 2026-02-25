@@ -7,8 +7,7 @@
 =============================================*/
 
 * {
-    /* temporary debug */
-    outline: blue 1px solid;
+
 }
 
 html {
@@ -24,9 +23,25 @@ h2, p {
     color: var(--text-primary);
 }
 
-h2 {
-    font-weight: 500;
+section h2 {
+    position: relative;
+    display: inline-block;
+    margin: 40px 0;
     font-size: 3rem;
+    font-weight: 500;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    transform: translateX(-50%);
+    bottom: -10px;
+    height: 4px;
+    background-color: var(--accent-primary);
+    margin-top: 10px;
+    border-radius: 3px;
 }
 
 main {
@@ -308,6 +323,7 @@ nav ul li.active {
 
 #skills {
     padding: 50px;
+    height: auto;
 }
 
 #skill-container {
@@ -326,14 +342,31 @@ nav ul li.active {
 
 }
 
+.skill-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
 .skill-card {
     display: flex;
     flex-direction: column;
-    width: 120px;
+    align-items: center;
+    width: 160px;
+    min-width: 80px;
     text-align: center;
     margin: 0 30px;
-};
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    background-color: rgba(169, 169, 169, 0.1);
+    transition: all 0.3s ease;
+}
 
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 /* ============================================
     6. Experience Section
