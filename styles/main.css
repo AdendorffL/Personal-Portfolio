@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url("./animations.css");
-@import url('../../js/scroll.js');
 
 /* ============================================
     1. Base Global Styling
@@ -195,7 +194,7 @@ nav ul li.active {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translateY(-7px);
     }
 }
 
@@ -396,7 +395,63 @@ nav ul li.active {
     6. Projects Section
 =============================================*/
 
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
 
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 60px;
+    background-color: rgba(169, 169, 169, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-card ul li {
+    background-color: var(--accent-secondary);
+    color: white;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 18px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    cursor: default;
+}
+
+.project-card ul li:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
 
 /* ============================================
     7. Contact Section
