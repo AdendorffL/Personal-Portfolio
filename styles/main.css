@@ -158,6 +158,8 @@ nav ul li.active {
 }
 
 #projects-btn {
+    display: inline-flex;
+    align-items: center;
     margin-top: 30px;
     padding: 12px 24px;
     font-size: 1.2rem;
@@ -167,6 +169,34 @@ nav ul li.active {
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#download-icon {
+    height: 1rem;
+    margin-right: 8px;
+    filter:invert() opacity(0.75);
+}
+
+#scroll-indicator {
+    position: absolute;
+    bottom: 5%;
+    width: 30px;
+    animation: bounce 2s infinite;
+    filter: opacity(0.75);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scroll-indicator.hidden {
+    opacity: 0;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 #projects-btn:hover {
