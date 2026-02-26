@@ -6,10 +6,6 @@
     1. Base Global Styling
 =============================================*/
 
-* {
-
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -19,7 +15,7 @@ body {
     font-family: 'Funnel Sans', sans-serif;
 }
 
-h2, p {
+h2, h3, p {
     color: var(--text-primary);
 }
 
@@ -57,8 +53,7 @@ ul {
 }
 
 #hero, #about,
-#skills, #experience,
-#projects, #contact {
+#skills, #projects, #contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,8 +65,7 @@ ul {
     background-color: var(--bg-secondary);
 }
 
-#about, #experience,
-#contact {
+#about, #contact {
     background-color: var(--bg-primary);
 }
 
@@ -369,17 +363,11 @@ nav ul li.active {
 }
 
 /* ============================================
-    6. Experience Section
+    6. Projects Section
 =============================================*/
 
 
 
 /* ============================================
-    7. Projects Section
-=============================================*/
-
-
-
-/* ============================================
-    8. Contact Section
+    7. Contact Section
 =============================================*/
