@@ -1,3 +1,5 @@
+// Scroll-based Navigation Highlighting
+
 const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll("nav li");
 
@@ -20,3 +22,15 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+// Scroll Indicator Animation
+
+const indicator = document.getElementById("scroll-indicator");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+    indicator.style.opacity = "0";
+  } else {
+    indicator.style.opacity = "1";
+  }
+});
