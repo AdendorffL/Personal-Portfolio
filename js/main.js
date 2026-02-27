@@ -60,11 +60,17 @@ for (let project in projects) {
         skillItem.textContent = skill;
         projectStackList.appendChild(skillItem);
     });
+    // Add github link
+    const githubLink = document.createElement("a");
+    githubLink.href = projects[project].github;
+    githubLink.textContent = "View on GitHub";
+    githubLink.target = "_blank";
     // Append all elements to the project card
     projectCard.appendChild(projectImg);
     projectCard.appendChild(projectTitle);
     projectCard.appendChild(projectDescription);
     projectCard.appendChild(projectStackList);
+    projectCard.appendChild(githubLink);
     // Append the project card to the container
     container.appendChild(projectCard);
 }
