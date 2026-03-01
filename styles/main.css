@@ -170,6 +170,25 @@ nav ul li.active {
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
+#meditation-circle {
+    position: absolute;
+    z-index: 0;
+    width: 60vw;
+    left: 70vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+}
+
+#meditation-circle svg {
+    z-index: 10;
+    width: 60vw;
+    height: auto;
+
+}
+
 #download-icon {
     height: 1rem;
     margin-right: 8px;

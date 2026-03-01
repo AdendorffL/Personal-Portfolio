@@ -25,7 +25,7 @@
 }
 
 /* Dark Mode */
-:root.dark {
+:root {
 
     /* ===== BACKGROUNDS ===== */
     --bg-primary: #121214;
