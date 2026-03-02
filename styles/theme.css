@@ -2,28 +2,6 @@
     Colors
 =======================================*/
 
-/* Light Mode */
-:root {
-
-    /* ===== BACKGROUNDS ===== */
-    --bg-primary: #faf9f8;        /* offwhite */
-    --bg-secondary: #E2E9D8;      /* beige */
-    --surface: #ffffff30;          
-
-    /* ===== TEXT ===== */
-    --text-primary: #1E1E24;      /* shadow gray */
-    --text-secondary: #81717A;    /* dusty mauve */
-    --text-muted: #b2b7bb;        /* mid gray */
-
-    /* ===== BORDERS ===== */
-    --border: #DDD1C7;
-
-    /* ===== ACCENTS ===== */
-    --accent-primary: #FF521B;    /* tiger flame */
-    --accent-secondary: #6F732F;  /* olive */
-
-}
-
 /* Dark Mode */
 :root {
 
