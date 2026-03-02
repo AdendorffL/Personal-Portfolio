@@ -1,10 +1,4 @@
 //==============
-// Skills Data
-//==============
-
-const skills = {}
-
-//==============
 // Project Data
 //==============
 
@@ -13,14 +7,14 @@ const projects = {
         "title": "Console Contact Book",
         "description": "A simple contact book application built using JavaScript. It allows users to add, edit, view, and delete contacts. The application uses local storage via JSON to save contact information.",
         "github": "https://github.com/AdendorffL/Mini-Project-Console-Contact-Book",
-        "image": "../assets/images/projects/console-contact-book.png",
+        "image": "./assets/images/projects/console-contact-book.png",
         "stack": ["JavaScript", "JSON"]
     },
     "project2": {
         "title": "SmartGear",
         "description": "An online store for sports gear. It features a user-friendly interface, product listings, live stock updates, live search functionality, user login and registration, role-based access control, and persistent data using SQL Server.",
         "github": "https://github.com/AdendorffL/College-Project-SmartGear",
-        "image": "../assets/images/projects/smartgear.png",
+        "image": "./assets/images/projects/smartgear.png",
         "stack": ["C#", "ASP.NET", "SQL Server", "HTML", "CSS", "JavaScript", "Bootstrap"]
     },
 
@@ -28,7 +22,7 @@ const projects = {
         "title": "Personal Portfolio",
         "description": "A personal portfolio website showcasing my projects, skills, and experience. It includes sections for about me, projects, contact information.",
         "github": "https://github.com/AdendorffL/New-Portfolio",
-        "image": "../assets/images/projects/portfolio.png",
+        "image": "./assets/images/projects/portfolio.png",
         "stack": ["HTML", "CSS", "JavaScript"]
     }
 }
