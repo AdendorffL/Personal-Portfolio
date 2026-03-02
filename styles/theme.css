@@ -2,13 +2,15 @@
     Colors
 =======================================*/
 
-/* Dark Mode */
 :root {
 
     /* ===== BACKGROUNDS ===== */
     --bg-primary: #121214;
     --bg-secondary: #1A1A1F;
     --surface: #1F1F2530;
+
+    /* ===== Button ===== */
+    --btn-primary: #3b3b3b;
 
     /* ===== TEXT ===== */
     --text-primary: #F2F2F2;
@@ -19,7 +21,7 @@
     --border: #2A2A32;
 
     /* ===== ACCENTS ===== */
-    --accent-primary: #FF6A3D;   /* lifted tiger flame */
-    --accent-secondary: #9BA64C; /* lifted olive */
+    --accent-primary: #FF6A3D;
+    --accent-secondary: #9BA64C;
 
 }
