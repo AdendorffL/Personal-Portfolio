@@ -17,7 +17,7 @@ const projects = {
         github: "https://github.com/AdendorffL/College-Project-SmartGear",
         image: "./assets/images/projects/smartgear.png",
         stack: ["C#", "ASP.NET", "SQL Server", "HTML", "CSS", "JavaScript", "Bootstrap"],
-        live: null // replace with URL string if hosted
+        live: null
     },
     project3: {
         title: "Personal Portfolio",
@@ -25,7 +25,7 @@ const projects = {
         github: "https://github.com/AdendorffL/New-Portfolio",
         image: "./assets/images/projects/portfolio.png",
         stack: ["HTML", "CSS", "JavaScript"],
-        live: null // replace with URL string if hosted
+        live: "https://adendorffl.github.io/Personal-Portfolio/"
     }
 };
 
