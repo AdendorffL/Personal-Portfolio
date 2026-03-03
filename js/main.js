@@ -69,3 +69,34 @@ Object.values(projects).forEach((project, index) => {
 
     container.appendChild(card);
 });
+
+// ==============
+// Scroll Reveal
+// ==============
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            // Unobserve after reveal so it doesn't re-trigger
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+// About — observe each bento card individually with staggered delay
+document.querySelectorAll("#about-bento .bento-card").forEach((card, index) => {
+    card.classList.add("reveal");
+    card.style.transitionDelay = `${index * 0.08}s`;
+    revealObserver.observe(card);
+});
+
+// Projects — cards already have card-enter animation on load,
+// so we only reveal if they're below the fold on first paint
+document.querySelectorAll(".project-card").forEach((card, index) => {
+    card.classList.add("reveal");
+    card.style.transitionDelay = `${index * 0.1}s`;
+    revealObserver.observe(card);
+});

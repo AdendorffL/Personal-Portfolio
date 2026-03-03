@@ -618,9 +618,6 @@ nav ul li.active a {
     background: var(--gradient-card);
     overflow: hidden;
     transition: border-color var(--ease-base), transform var(--ease-base), box-shadow var(--ease-base);
-    /* Staggered entrance — driven by --i set in JS */
-    animation: card-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
-    animation-delay: calc(var(--i, 0) * 0.1s);
 }
 
 @keyframes card-enter {
@@ -933,4 +930,20 @@ nav ul li.active a {
     .bento-card {
         padding: 24px;
     }
+}
+
+/* ============================================
+    Scroll Reveal Animations
+=============================================*/
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
