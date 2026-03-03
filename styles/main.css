@@ -17,7 +17,7 @@ h2, h3, p {
     color: var(--text-primary);
 }
 
-/* Shared section heading style — applies everywhere, no duplication needed */
+/* Shared section heading styles */
 section h2 {
     position: relative;
     display: inline-block;
@@ -44,7 +44,7 @@ section h2:hover::after {
     width: 100px;
 }
 
-/* Utility: centered flex column — used across multiple sections */
+/* Utility: centered flex column */
 .flex-col-center {
     display: flex;
     flex-direction: column;
@@ -88,18 +88,18 @@ nav {
     display: flex;
     position: fixed;
     width: auto;
-    left: 50%;
-    transform: translateX(-50%);
     border: 1px solid var(--border);
     border-radius: 14px;
     justify-content: center;
     margin-top: 12px;
-    background-color: rgba(13, 13, 16, 0.7);
+    background-color: rgba(28, 26, 23, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 0 20px;
     z-index: 100;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 var(--border);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav ul {
@@ -119,6 +119,7 @@ nav ul li {
     margin: 8px 4px;
     padding: 6px 14px;
     border-radius: 10px;
+    text-align: right;
     transition: background-color var(--ease-base), color var(--ease-fast);
     font-weight: 500;
     font-size: 0.9rem;
@@ -132,15 +133,112 @@ nav ul li:hover a {
     color: var(--text-primary);
 }
 
-/* Active: use surface rather than accent orange */
+nav ul li.active a {
+    color: var(--text-primary);
+}
+
 nav ul li.active {
     background-color: var(--surface-hover);
     border: 1px solid var(--border-strong);
-    box-shadow: none;
 }
 
-nav ul li.active a {
-    color: var(--text-primary);
+/* Hamburger button — hidden on desktop */
+#nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+     padding: 12px;
+    min-width: 44px;
+    min-height: 44px;
+    z-index: 101;
+}
+
+#nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-secondary);
+    border-radius: 2px;
+    transition: transform var(--ease-base), opacity var(--ease-base), background-color var(--ease-fast);
+    transform-origin: center;
+    pointer-events: none;
+}
+
+/* Animate hamburger → X when open */
+#nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+#nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+#nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================
+    Responsive — Nav
+=============================================*/
+
+@media (max-width: 640px) {
+
+    nav {
+        /* Stick to top edge, full width */
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        margin-top: 0;
+        width: 100%;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    /* Top row — logo space + hamburger button */
+    #nav-toggle {
+        display: flex;
+        align-self: flex-end;
+        margin: 12px 0;
+    }
+
+    /* Nav links — hidden by default, revealed on open */
+    #nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--ease-slow), padding var(--ease-base);
+        padding: 0;
+    }
+
+    #nav-links.open {
+        max-height: 400px;
+        padding-bottom: 12px;
+    }
+
+    nav ul li {
+        margin: 3px 0;
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+
+    /* Push sections down so content isn't hidden under the fixed nav */
+    body {
+        padding-top: 52px;
+    }
 }
 
 /* ============================================
@@ -189,7 +287,7 @@ nav ul li.active a {
 }
 
 #hero h1 {
-    font-size: clamp(2.4rem, 5.5vw, 4.5rem); /* Responsive, not fixed */
+    font-size: clamp(2.4rem, 5.5vw, 4.5rem);
     color: var(--text-primary);
     margin: 0;
     font-weight: 700;
@@ -240,7 +338,6 @@ nav ul li.active a {
     transform: translateY(-1px);
 }
 
-/* Decorative SVG blobs — kept but refined opacity */
 #meditation-circle {
     position: absolute;
     z-index: 0;
@@ -302,7 +399,6 @@ nav ul li.active a {
     50% { transform: translateY(-8px); }
 }
 
-/* Floating shapes — now use accent colors purposefully */
 .floating-shape {
     position: absolute;
     pointer-events: none;
@@ -835,24 +931,24 @@ nav ul li.active a {
 }
 
 /* Give the primary CTA (email) a bit more weight */
-#gmail-link {
+#linkedin-link {
     background-color: var(--accent-primary);
     border-color: transparent;
     color: white;
     box-shadow: 0 2px 10px var(--accent-primary-glow);
 }
 
-#gmail-link img {
+#linkedin-link img {
     filter: invert(1);
 }
 
-#gmail-link:hover {
+#linkedin-link:hover {
     background-color: var(--btn-primary-hover);
     color: white;
     border-color: transparent;
 }
 
-#gmail-link:hover img {
+#linkedin-link:hover img {
     filter: invert(1);
 }
 

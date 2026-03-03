@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lourens Adendorff — Full-Stack Developer</title><!-- improved title -->
+    <title>Lourens Adendorff — Full-Stack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/tab-icon.svg">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/theme.css">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <!-- nav moved outside <main> — it's a site-wide landmark, not page content -->
-    <nav>
-        <ul>
+    <!-- ========== Nav Bar ========== -->
+    <nav id="navbar">
+        <ul id="nav-links">
             <li><a href="#hero" class="nav-link">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+        <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <main>
@@ -247,9 +253,10 @@
     </div>
 </section>
 </main>
-
+    <!-- ========== Scripts ========== -->
     <script src="./js/main.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/circle-injector.js"></script>
+    <script src="./js/nav.js"></script>
 </body>
 </html>

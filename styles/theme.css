@@ -46,10 +46,6 @@
 
 /* ======================================
     Grain Overlay
-    A pseudo-element on <body> lays a
-    SVG noise texture over the whole page
-    at low opacity — gives that analogue,
-    slightly worn feel without any images.
 =======================================*/
 
 body::before {
