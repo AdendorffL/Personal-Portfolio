@@ -41,23 +41,26 @@ This portfolio was designed and built entirely by hand to reflect the same value
 ```
 portfolio/
 ├── index.html
+├── README.md
+├── LICENSE
 ├── assets/
+|   ├── CV/
+|   |   └── Lourens_Adendorff_CV.pdf
 │   ├── icons/
-│   │   ├── favicon.svg
+│   │   ├── tab-icon.svg
 │   │   ├── download.svg
 │   │   ├── scroll-down.svg
 │   │   ├── gmail.svg
 │   │   └── whatsapp.svg
-│   ├── images/
-│   │   ├── projects/
-│   │   │   ├── console-contact-book.png
-│   │   │   ├── smartgear.png
-│   │   │   └── portfolio.png
-│   │   └── svgs/
-│   │       ├── meditation-circle.svg
-│   │       └── moonsign-circle.svg
-│   └── CV/
-│       └── Lourens_Adendorff_CV.pdf
+│   └── images/
+│       ├── projects/
+│       │   ├── console-contact-book.png
+│       │   ├── smartgear.png
+│       │   └── portfolio.png
+│       └── svgs/
+│           ├── meditation-circle.svg
+│           └── moonsign-circle.svg
+|
 ├── styles/
 │   ├── reset.css
 │   ├── theme.css
