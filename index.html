@@ -3,167 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lourens Adendorff Dev</title>
+    <title>Lourens Adendorff — Full-Stack Developer</title><!-- improved title -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/theme.css">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
+    <!-- nav moved outside <main> — it's a site-wide landmark, not page content -->
+    <nav>
+        <ul>
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <!-- ========== Nav Bar Section ========= -->
-        <nav>
-            <ul>
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
         <!-- ========== Hero Section ========== -->
         <section id="hero">
-            <div id="meditation-circle"></div>
-            <div id="moonsign-circle"></div>
-            <div class="floating-shape" id="circle"></div>
-            <div class="floating-shape" id="square"></div>
-            <div class="floating-shape" id="square2"></div>
+            <!-- aria-hidden: decorative SVGs, screen readers can skip -->
+            <div id="meditation-circle" aria-hidden="true"></div>
+            <div id="moonsign-circle" aria-hidden="true"></div>
+            <!-- removed: floating-shape divs (#circle, #square, #square2) -->
+
             <div id="hero-content">
-                <h1 id="name"><strong class="primary-em">Lourens</strong> <strong class="secondary-em">Adendorff</strong></h1>
-                <p id="prof"><strong class="secondary-em">Full-Stack</strong> Developer with a <strong class="primary-em">Backend</strong> Bias</p>
+                <span class="eyebrow">Portfolio · 2025</span><!-- new eyebrow label -->
+                <!-- span instead of strong — coloring is presentational, not semantic emphasis -->
+                <h1 id="name">
+                    <span class="primary-em">Lourens</span>
+                    <span class="secondary-em">Adendorff</span>
+                </h1>
+                <p id="prof">
+                    <span class="secondary-em">Full-Stack</span> Developer with a <span class="primary-em">Backend</span> Bias
+                </p>
             </div>
-            <a href="./assets/CV/Lourens Adendorff CV.pdf" 
-            download="Lourens Adendorff CV.pdf" 
-            id="projects-btn"><img id="download-icon" src="./assets/icons/download.svg">Download CV</a>
-            <img src="./assets/icons/scroll-down.svg" id="scroll-indicator">
+
+            <a href="./assets/CV/Lourens_Adendorff_CV.pdf"
+               download="Lourens_Adendorff_CV.pdf"
+               id="projects-btn"
+               aria-label="Download Lourens Adendorff CV"><!-- underscores in filename, aria-label added -->
+                <img id="download-icon" src="./assets/icons/download.svg" alt=""><!-- alt="" = decorative -->
+                Download CV
+            </a>
+
+            <img src="./assets/icons/scroll-down.svg" id="scroll-indicator" alt=""><!-- alt="" = decorative -->
         </section>
-        <!-- ========== About Section ========== -->
-        <section id="about">
-                <h2>About Me</h2>
-                <div id="about-content">
-                    <p>I am Lourens Adendorff, a Full-Stack Developer, working primarily with Node.js and .NET. 
-                        I focus on building systems that are structured, maintainable, and designed to scale - 
-                        because software should age well, not mysteriously.<br><br>
-                        I care about clean architecture, predictable behavior, and writing code that makes sense long
-                        after the sprint ends. Most of my time goes into ensuring that business logic is clear, testable, 
-                        and resilient under real-world conditions. <br><br>
-                        I approach development pragmatically: clarity of cleverness, structure over shortcuts, and 
-                        solutions that hold up outside of development environments. I'm continuously refining my 
-                        understanding of system design, performance optimization, and production-ready engineering
-                        practices. <br><br>
-                        <em>I build the parts people don't see - but rely on every time they click something.</em>
-                    </p>
-                <div id="about-shape"><p>Nameless Monster</p></div>
+
+<!-- ========== About Section ========== -->
+<section id="about">
+    <h2>About Me</h2>
+    <div id="about-bento">
+
+        <!-- Bio — tall left column -->
+        <div class="bento-card" id="bento-bio">
+            <span class="bento-label">who am i</span>
+            <p>
+                I'm a Full-Stack Developer working primarily with Node.js and .NET.
+                I focus on building systems that are structured, maintainable, and designed to scale —
+                because software should age well, not mysteriously.
+            </p>
+            <p>
+                I care about clean architecture, predictable behavior, and writing code that makes sense
+                long after the sprint ends. Most of my time goes into ensuring that business logic is
+                clear, testable, and resilient under real-world conditions.
+            </p>
+            <em>I build the parts people don't see — but rely on every time they click something.</em>
+        </div>
+
+        <!-- Code block -->
+        <div class="bento-card" id="bento-code">
+            <span class="bento-label">profile.js</span>
+            <pre><code><span class="code-keyword">const</span> <span class="code-name">developer</span> = {
+  <span class="code-key">name</span>:    <span class="code-string">"Lourens Adendorff"</span>,
+  <span class="code-key">bias</span>:    <span class="code-string">"Backend"</span>,
+  <span class="code-key">clarity</span>: <span class="code-string">"over cleverness"</span>,
+  <span class="code-key">scale</span>:   <span class="code-bool">true</span>,
+};</code></pre>
+        </div>
+
+        <!-- Location -->
+        <div class="bento-card" id="bento-location">
+            <span class="bento-label">Location</span>
+            <div class="bento-icon">🇿🇦</div>
+            <p>South Africa</p>
+        </div>
+
+        <!-- Status — dot now sits inline with the text -->
+        <div class="bento-card" id="bento-status">
+            <span class="bento-label">Status</span>
+            <p><span class="status-dot"></span>Open to opportunities</p>
+        </div>
+
+        <!-- Current focus -->
+        <div class="bento-card" id="bento-stack">
+            <span class="bento-label">Current Focus</span>
+            <div class="bento-tags">
+                <span>Node.js</span>
+                <span>.NET</span>
+                <span>System Design</span>
+                <span>SQL Server</span>
             </div>
-        </section>
-        <!-- ========== Skills Section ========== -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <div id="skill-container">
-                <!-- Backend -->
-                <h3>Backend</h3>
-                <div class="skill-separator" id="langauges">
-                    <div class="skill-card">
-                        <div class="skill-img">    
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-                        </div>
-                        <p>Node.js</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== Skills Section ========== -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div id="skill-container">
+
+        <div class="skill-group">
+            <span class="skill-group-label">Backend</span>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" />
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-                        </div>
-                        <p>C#</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-                        </div>
-                        <p>Python</p>
-                    </div>
+                    <p>Node.js</p>
                 </div>
-                <!-- Frontend -->
-                <h3>Frontend</h3>
-                <div class="skill-separator" id="Web">
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                        </div>
-                        <p>JavaScript</p>
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" />
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                        </div>
-                        <p>HTML</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-                        </div>
-                        <p>CSS</p>
-                    </div>
+                    <p>C#</p>
                 </div>
-                <!-- Databases -->
-                <h3>Databases</h3>
-                <div class="skill-separator" id="databases">
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" />
-                        </div>
-                        <p>SQL Server</p>
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
                     </div>
-                </div>
-                <!-- Tools -->
-                <h3>Tools</h3>
-                <div class="skill-separator" id="tools">
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-                        </div>
-                        <p>Git</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-                        </div>
-                        <p>VS Code</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-img">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
-                        </div>
-                        <p>Bash</p>
-                    </div>
+                    <p>Python</p>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="skill-group">
+            <span class="skill-group-label">Frontend</span>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                    </div>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
+                    </div>
+                    <p>HTML</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" />
+                    </div>
+                    <p>CSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <span class="skill-group-label">Databases</span>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" /></div>
+                    <p>PostgreSQL</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="Microsoft SQL Server" />
+                    </div>
+                    <p>SQL Server</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <span class="skill-group-label">Tools</span>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
+                    </div>
+                    <p>Git</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" />
+                    </div>
+                    <p>VS Code</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" alt="Bash" />
+                    </div>
+                    <p>Bash</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
         <!-- ========== Projects Section ========== -->
         <section id="projects">
             <h2>Projects</h2>
-            <div id="project-container"></div>
-        </section>
-        <!-- ========== Contact Section ========== -->
-        <section id="contact">
-            <h2>Join Networks</h2>
-            <p>"Let's innovate together and build groundbreaking solutions."</p>
-            <div id="contact-links">
-                <a id="github-link" href="https://github.com/AdendorffL">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
-                </a>
-                <a id="linkedin-link" href="https://www.linkedin.com/in/lourens-adendorff-1037b1261/">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" />
-                </a>
-                <a id="gmail-link" href="mailto:lou.adendorff@gmail.com">
-                    <img src="./assets/icons/gmail.svg">
-                </a>
-                <a id="whatsapp-link" href="https://wa.me/27823382284">
-                    <img src="./assets/icons/whatsapp.svg" />
-
-                </a>
+            <div id="project-container">
+                <!-- Projects injected by main.js -->
+                <noscript>
+                    <p style="color: var(--text-secondary); text-align: center; padding: 40px 0;">
+                        JavaScript is required to view projects.
+                    </p>
+                </noscript>
             </div>
         </section>
-    </main>
+
+<!-- ========== Contact Section ========== -->
+<section id="contact">
+    <h2>Get in Touch</h2>
+    <div id="contact-card">
+        <span class="bento-label">Contact</span>
+        <p id="contact-tagline">Good systems don't build themselves — let's talk.</p>
+        <div id="contact-links">
+            <a href="https://github.com/AdendorffL" target="_blank" rel="noopener noreferrer" class="contact-pill" id="github-link">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" />
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/lourens-adendorff-1037b1261/" target="_blank" rel="noopener noreferrer" class="contact-pill" id="linkedin-link">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" alt="" />
+                LinkedIn
+            </a>
+            <a href="mailto:lou.adendorff@gmail.com" class="contact-pill" id="gmail-link">
+                <img src="./assets/icons/gmail.svg" alt="" />
+                Email
+            </a>
+            <a href="https://wa.me/27823382284" target="_blank" rel="noopener noreferrer" class="contact-pill" id="whatsapp-link">
+                <img src="./assets/icons/whatsapp.svg" alt="" />
+                WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+</main>
+
     <script src="./js/main.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/circle-injector.js"></script>
