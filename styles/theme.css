@@ -5,7 +5,6 @@
 :root {
 
     /* ===== BACKGROUNDS ===== */
-    /* Warm dark — lifted from pure black toward charcoal with a slight brown tint */
     --bg-primary: #1C1A17;
     --bg-secondary: #221F1B;
     --surface: rgba(255, 248, 235, 0.04);
@@ -16,7 +15,6 @@
     --btn-primary-hover: #ff865f;
 
     /* ===== TEXT ===== */
-    /* Slightly warm whites — pure #FFF feels cold against the brown-tinted bg */
     --text-primary: #EDE8DF;
     --text-secondary: #A09890;
     --text-muted: #635C55;
